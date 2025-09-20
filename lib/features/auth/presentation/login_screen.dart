@@ -350,7 +350,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                                   MediaQuery.of(context).size.height * 0.035),
                               child: Center(
                                 child: authState.isLoading
-                                    ? SizedBox(
+                                    ? const SizedBox(
                                         width: 20,
                                         height: 20,
                                         child: CircularProgressIndicator(

@@ -221,21 +221,22 @@ class _AssessmentsTab extends StatelessWidget {
                 const Text(
                   'View All',
                   style: TextStyle(
-                    fontSize: 14,
-                    color: Color(0xFF6B7280),
+                    decoration: TextDecoration.underline,
+                    fontSize: 18,
+                    color: Color(0xFF303030),
                   ),
                 ),
-                const SizedBox(width: 4),
+                const SizedBox(width: 8),
                 Container(
-                  width: 20,
-                  height: 20,
+                  width: 40,
+                  height: 40,
                   decoration: const BoxDecoration(
-                    color: Color(0xFF6B7280),
+                    color: Color(0xFF232F58),
                     shape: BoxShape.circle,
                   ),
                   child: const Icon(
                     Icons.arrow_forward,
-                    size: 12,
+                    size: 20,
                     color: Colors.white,
                   ),
                 ),
@@ -250,7 +251,7 @@ class _AssessmentsTab extends StatelessWidget {
             color: const Color(0xFFD2F0DF),
             borderRadius: BorderRadius.circular(24),
           ),
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.fromLTRB(20, 20, 0, 20),
           child: Row(
             children: [
               // Left content
@@ -285,29 +286,46 @@ class _AssessmentsTab extends StatelessWidget {
                     ),
                     const SizedBox(height: 12),
                     // Progress bar
-                    Container(
-                      height: 8,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(4),
-                      ),
-                      child: FractionallySizedBox(
-                        alignment: Alignment.centerLeft,
-                        widthFactor: 0.5,
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xFFE05686),
-                            borderRadius: BorderRadius.circular(4),
+                    SizedBox(
+                      width: 200, // Reduced width
+                      child: Container(
+                        height: 8,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(4),
+                        ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(4),
+                          child: const LinearProgressIndicator(
+                            value: 0.5,
+                            backgroundColor: Colors.white,
+                            valueColor: AlwaysStoppedAnimation<Color>(
+                                Color(0xFFE05686)),
                           ),
                         ),
                       ),
                     ),
                     const SizedBox(height: 8),
-                    const Text(
-                      '10/20 Complete',
-                      style: TextStyle(
-                        fontSize: 14,
-                        color: Color(0xFF111827),
+                    RichText(
+                      text: const TextSpan(
+                        children: [
+                          TextSpan(
+                            text: '10/20',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Color(0xFF111827),
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          TextSpan(
+                            text: ' Complete',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Color(0xFF111827),
+                              fontWeight: FontWeight.normal,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                     const SizedBox(height: 16),
@@ -338,13 +356,13 @@ class _AssessmentsTab extends StatelessWidget {
                 ),
               ),
               // Right image
-              const SizedBox(width: 16),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(16),
+              Transform(
+                alignment: Alignment.center,
+                transform: Matrix4.identity()..scale(-1.0, 1.0),
                 child: Image.asset(
                   'assets/images/women_total_challenge.png',
-                  width: 100,
-                  height: 100,
+                  width: 150,
+                  height: 150,
                   fit: BoxFit.cover,
                 ),
               ),
@@ -369,21 +387,22 @@ class _AssessmentsTab extends StatelessWidget {
                 const Text(
                   'View All',
                   style: TextStyle(
-                    fontSize: 14,
-                    color: Color(0xFF6B7280),
+                    decoration: TextDecoration.underline,
+                    fontSize: 18,
+                    color: Color(0xFF303030),
                   ),
                 ),
-                const SizedBox(width: 4),
+                const SizedBox(width: 8),
                 Container(
-                  width: 20,
-                  height: 20,
+                  width: 40,
+                  height: 40,
                   decoration: const BoxDecoration(
-                    color: Color(0xFF6B7280),
+                    color: Color(0xFF232F58),
                     shape: BoxShape.circle,
                   ),
                   child: const Icon(
                     Icons.arrow_forward,
-                    size: 12,
+                    size: 20,
                     color: Colors.white,
                   ),
                 ),
@@ -457,16 +476,16 @@ class _AssessmentsTab extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(height: 2),
-                          Row(
+                          const Row(
                             children: [
-                              const Text(
+                              Text(
                                 'Difficulty: ',
                                 style: TextStyle(
                                   fontSize: 11,
                                   color: Color(0xFF6B7280),
                                 ),
                               ),
-                              const Text(
+                              Text(
                                 'Medium',
                                 style: TextStyle(
                                   fontSize: 11,
@@ -541,16 +560,16 @@ class _AssessmentsTab extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(height: 2),
-                          Row(
+                          const Row(
                             children: [
-                              const Text(
+                              Text(
                                 'Difficulty: ',
                                 style: TextStyle(
                                   fontSize: 11,
                                   color: Color(0xFF6B7280),
                                 ),
                               ),
-                              const Text(
+                              Text(
                                 'Easy',
                                 style: TextStyle(
                                   fontSize: 11,
@@ -722,21 +741,22 @@ class _AppointmentsTab extends StatelessWidget {
                 const Text(
                   'View All',
                   style: TextStyle(
-                    fontSize: 14,
-                    color: Color(0xFF6B7280),
+                    decoration: TextDecoration.underline,
+                    fontSize: 18,
+                    color: Color(0xFF303030),
                   ),
                 ),
-                const SizedBox(width: 4),
+                const SizedBox(width: 8),
                 Container(
-                  width: 20,
-                  height: 20,
+                  width: 40,
+                  height: 40,
                   decoration: const BoxDecoration(
-                    color: Color(0xFF6B7280),
+                    color: Color(0xFF232F58),
                     shape: BoxShape.circle,
                   ),
                   child: const Icon(
                     Icons.arrow_forward,
-                    size: 12,
+                    size: 20,
                     color: Colors.white,
                   ),
                 ),
@@ -751,7 +771,7 @@ class _AppointmentsTab extends StatelessWidget {
             color: const Color(0xFFD2F0DF),
             borderRadius: BorderRadius.circular(24),
           ),
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.fromLTRB(20, 20, 0, 20),
           child: Row(
             children: [
               // Left content
@@ -786,29 +806,46 @@ class _AppointmentsTab extends StatelessWidget {
                     ),
                     const SizedBox(height: 12),
                     // Progress bar
-                    Container(
-                      height: 8,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(4),
-                      ),
-                      child: FractionallySizedBox(
-                        alignment: Alignment.centerLeft,
-                        widthFactor: 0.5,
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xFFE05686),
-                            borderRadius: BorderRadius.circular(4),
+                    SizedBox(
+                      width: 200, // Reduced width
+                      child: Container(
+                        height: 8,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(4),
+                        ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(4),
+                          child: const LinearProgressIndicator(
+                            value: 0.5,
+                            backgroundColor: Colors.white,
+                            valueColor: AlwaysStoppedAnimation<Color>(
+                                Color(0xFFE05686)),
                           ),
                         ),
                       ),
                     ),
                     const SizedBox(height: 8),
-                    const Text(
-                      '10/20 Complete',
-                      style: TextStyle(
-                        fontSize: 14,
-                        color: Color(0xFF111827),
+                    RichText(
+                      text: const TextSpan(
+                        children: [
+                          TextSpan(
+                            text: '10/20',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Color(0xFF111827),
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          TextSpan(
+                            text: ' Complete',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Color(0xFF111827),
+                              fontWeight: FontWeight.normal,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                     const SizedBox(height: 16),
@@ -839,13 +876,13 @@ class _AppointmentsTab extends StatelessWidget {
                 ),
               ),
               // Right image
-              const SizedBox(width: 16),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(16),
+              Transform(
+                alignment: Alignment.center,
+                transform: Matrix4.identity()..scale(-1.0, 1.0),
                 child: Image.asset(
                   'assets/images/women_total_challenge.png',
-                  width: 100,
-                  height: 100,
+                  width: 140,
+                  height: 140,
                   fit: BoxFit.cover,
                 ),
               ),
@@ -870,21 +907,22 @@ class _AppointmentsTab extends StatelessWidget {
                 const Text(
                   'View All',
                   style: TextStyle(
-                    fontSize: 14,
-                    color: Color(0xFF6B7280),
+                    decoration: TextDecoration.underline,
+                    fontSize: 18,
+                    color: Color(0xFF303030),
                   ),
                 ),
-                const SizedBox(width: 4),
+                const SizedBox(width: 8),
                 Container(
-                  width: 20,
-                  height: 20,
+                  width: 40,
+                  height: 40,
                   decoration: const BoxDecoration(
-                    color: Color(0xFF6B7280),
+                    color: Color(0xFF232F58),
                     shape: BoxShape.circle,
                   ),
                   child: const Icon(
                     Icons.arrow_forward,
-                    size: 12,
+                    size: 20,
                     color: Colors.white,
                   ),
                 ),
@@ -958,16 +996,16 @@ class _AppointmentsTab extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(height: 2),
-                          Row(
+                          const Row(
                             children: [
-                              const Text(
+                              Text(
                                 'Difficulty: ',
                                 style: TextStyle(
                                   fontSize: 11,
                                   color: Color(0xFF6B7280),
                                 ),
                               ),
-                              const Text(
+                              Text(
                                 'Medium',
                                 style: TextStyle(
                                   fontSize: 11,
@@ -1042,16 +1080,16 @@ class _AppointmentsTab extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(height: 2),
-                          Row(
+                          const Row(
                             children: [
-                              const Text(
+                              Text(
                                 'Difficulty: ',
                                 style: TextStyle(
                                   fontSize: 11,
                                   color: Color(0xFF6B7280),
                                 ),
                               ),
-                              const Text(
+                              Text(
                                 'Easy',
                                 style: TextStyle(
                                   fontSize: 11,
