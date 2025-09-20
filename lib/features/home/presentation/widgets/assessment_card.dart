@@ -39,21 +39,46 @@ class AssessmentCard extends StatelessWidget {
                 // Image with background
                 Container(
                   width: 140,
-                  height: 130,
+                  height: title == 'Fitness Assessment'
+                      ? 130
+                      : 150, // Woman stays 130, man becomes 150
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(16),
-                    color: title == 'Fitness Assessment'
-                        ? const Color(
-                            0xFFFFF4E6) // Light orange background for fitness
-                        : const Color(
-                            0xFFE8F5E8), // Light green background for health risk
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(20),
+                      bottomLeft: Radius.circular(20),
+                      topRight: Radius.circular(16),
+                      bottomRight: Radius.circular(16),
+                    ),
+                    gradient: title == 'Fitness Assessment'
+                        ? const LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            transform: GradientRotation(314.68 * 3.14159 / 180),
+                            colors: [
+                              Color(0x80E36731), // rgba(227, 103, 49, 0.5)
+                              Color(0x80DABE5D), // rgba(218, 190, 93, 0.5)
+                            ],
+                          )
+                        : const RadialGradient(
+                            center: Alignment(0.5, 1.22),
+                            radius: 1.22,
+                            colors: [
+                              Color(0x8091B655), // rgba(145, 182, 85, 0.5)
+                              Color(0x8069F5BB), // rgba(105, 245, 187, 0.5)
+                            ],
+                          ),
                   ),
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(16),
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(20),
+                      bottomLeft: Radius.circular(20),
+                      topRight: Radius.circular(16),
+                      bottomRight: Radius.circular(16),
+                    ),
                     child: Image.asset(
                       imageAsset,
-                      width: title == 'Fitness Assessment' ? 120 : 110,
-                      height: title == 'Fitness Assessment' ? 110 : 100,
+                      width: title == 'Fitness Assessment' ? 120 : 130,
+                      height: title == 'Fitness Assessment' ? 110 : 130,
                       fit: title == 'Fitness Assessment'
                           ? BoxFit.contain
                           : BoxFit
@@ -72,7 +97,7 @@ class AssessmentCard extends StatelessWidget {
                         style: const TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w700,
-                          color: Color(0xFF111827),
+                          color: Color(0xFF222E58),
                         ),
                       ),
                       const SizedBox(height: 8),
@@ -80,37 +105,43 @@ class AssessmentCard extends StatelessWidget {
                         subtitle,
                         style: const TextStyle(
                           fontSize: 14,
-                          color: Color(0xFF6B7280),
+                          color: Color(0xFF2A2A2A),
                           height: 1.4,
+                          fontWeight: FontWeight.w400,
                         ),
                         maxLines: 3,
                         overflow: TextOverflow.ellipsis,
                       ),
                       const SizedBox(height: 16),
-                      // Start button
-                      Container(
-                        width: 80,
-                        height: 32,
-                        decoration: BoxDecoration(
-                          color: const Color(0xFF2E61D3),
-                          borderRadius: BorderRadius.circular(16),
-                        ),
-                        child: TextButton.icon(
-                          onPressed: onTap,
-                          icon: const Icon(
-                            Icons.play_arrow,
-                            color: Colors.white,
-                            size: 16,
+                      // Start button - Circular with play icon and text
+                      Row(
+                        children: [
+                          Container(
+                            width: 40,
+                            height: 40,
+                            decoration: const BoxDecoration(
+                              color: Color(0xFF2E61D3),
+                              shape: BoxShape.circle,
+                            ),
+                            child: IconButton(
+                              onPressed: onTap,
+                              icon: const Icon(
+                                Icons.play_arrow,
+                                color: Colors.white,
+                                size: 20,
+                              ),
+                            ),
                           ),
-                          label: const Text(
+                          const SizedBox(width: 8),
+                          const Text(
                             'Start',
                             style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 12,
+                              color: Color(0xFF2E61D3),
+                              fontSize: 14,
                               fontWeight: FontWeight.w600,
                             ),
                           ),
-                        ),
+                        ],
                       ),
                     ],
                   ),
