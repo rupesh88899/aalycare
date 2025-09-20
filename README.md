@@ -25,7 +25,7 @@ https://github.com/user-attachments/assets/887a09f8-b8f2-4137-9f40-7ee5d9ac0394
 <img src="https://github.com/user-attachments/assets/7099d476-d2ad-4804-8ec9-50ec31518820" width="100">
 
 - Drawer with Logout Button  
-<img src="https://github.com/user-attachments/assets/8f899fd8-b743-476c-9cd4-266575c4e23f" width="300">
+<img src="https://github.com/user-attachments/assets/8f899fd8-b743-476c-9cd4-266575c4e23f" width="100">
 
 
   
