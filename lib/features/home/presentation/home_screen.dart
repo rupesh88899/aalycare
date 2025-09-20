@@ -421,7 +421,7 @@ class _AssessmentsTab extends StatelessWidget {
         const SizedBox(height: 12),
         // Workout cards - horizontal scrollable
         SizedBox(
-          height: 120,
+          height: 140,
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: [
@@ -430,80 +430,104 @@ class _AssessmentsTab extends StatelessWidget {
                 width: 280,
                 margin: const EdgeInsets.only(right: 16),
                 decoration: BoxDecoration(
-                  color: const Color(0xFFFFE1D5),
+                  color: Colors.white,
                   borderRadius: BorderRadius.circular(20),
+                  border: Border.all(
+                    color: const Color(0xFFCDCDCD),
+                    width: 1,
+                  ),
                 ),
-                padding: const EdgeInsets.all(12),
                 child: Row(
                   children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(16),
-                      child: Image.asset(
-                        'assets/images/women_sweat_starter_card_image.png',
-                        width: 70,
-                        height: 70,
-                        fit: BoxFit.cover,
+                    // Image section with colored background
+                    Container(
+                      width: 120,
+                      height: 140,
+                      decoration: const BoxDecoration(
+                        color: Color(0xFFFFE1D5),
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(20),
+                          bottomLeft: Radius.circular(20),
+                        ),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 15),
+                        child: ClipRRect(
+                          borderRadius: const BorderRadius.only(
+                            topLeft: Radius.circular(20),
+                            bottomLeft: Radius.circular(20),
+                          ),
+                          child: Image.asset(
+                            'assets/images/women_sweat_starter_card_image.png',
+                            width: 80,
+                            height: 120,
+                            fit: BoxFit.contain,
+                          ),
+                        ),
                       ),
                     ),
-                    const SizedBox(width: 12),
+                    // Text section with white background
                     Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Text(
-                            'Sweat Starter',
-                            style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.w700,
-                              color: Color(0xFF111827),
-                            ),
-                          ),
-                          const SizedBox(height: 2),
-                          const Text(
-                            'Full Body',
-                            style: TextStyle(
-                              fontSize: 13,
-                              color: Color(0xFF6B7280),
-                            ),
-                          ),
-                          const SizedBox(height: 6),
-                          Container(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 6, vertical: 2),
-                            decoration: BoxDecoration(
-                              color: const Color(0xFFE0F2FE),
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: const Text(
-                              'Lose Weight',
+                      child: Padding(
+                        padding: const EdgeInsets.all(12),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text(
+                              'Sweat Starter',
                               style: TextStyle(
-                                fontSize: 11,
-                                color: Color(0xFF0369A1),
+                                fontSize: 15,
+                                fontWeight: FontWeight.w700,
+                                color: Color(0xFF111827),
                               ),
                             ),
-                          ),
-                          const SizedBox(height: 2),
-                          const Row(
-                            children: [
-                              Text(
-                                'Difficulty: ',
+                            const SizedBox(height: 2),
+                            const Text(
+                              'Full Body',
+                              style: TextStyle(
+                                fontSize: 13,
+                                color: Color(0xFF6B7280),
+                              ),
+                            ),
+                            const SizedBox(height: 6),
+                            Container(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 6, vertical: 2),
+                              decoration: BoxDecoration(
+                                color: const Color(0xFFE0F2FE),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: const Text(
+                                'Lose Weight',
                                 style: TextStyle(
                                   fontSize: 11,
-                                  color: Color(0xFF6B7280),
+                                  color: Color(0xFF0369A1),
                                 ),
                               ),
-                              Text(
-                                'Medium',
-                                style: TextStyle(
-                                  fontSize: 11,
-                                  color: Color(0xFFE05686),
-                                  fontWeight: FontWeight.w500,
+                            ),
+                            const SizedBox(height: 2),
+                            const Row(
+                              children: [
+                                Text(
+                                  'Difficulty: ',
+                                  style: TextStyle(
+                                    fontSize: 11,
+                                    color: Color(0xFF6B7280),
+                                  ),
                                 ),
-                              ),
-                            ],
-                          ),
-                        ],
+                                Text(
+                                  'Medium',
+                                  style: TextStyle(
+                                    fontSize: 11,
+                                    color: Color(0xFFE05686),
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],
@@ -514,80 +538,101 @@ class _AssessmentsTab extends StatelessWidget {
                 width: 280,
                 margin: const EdgeInsets.only(right: 16),
                 decoration: BoxDecoration(
-                  color: const Color(0xFFE8F5E8),
+                  color: Colors.white,
                   borderRadius: BorderRadius.circular(20),
+                  border: Border.all(
+                    color: const Color(0xFFCDCDCD),
+                    width: 1,
+                  ),
                 ),
-                padding: const EdgeInsets.all(12),
                 child: Row(
                   children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(16),
-                      child: Image.asset(
-                        'assets/images/work_routines_image2.png',
-                        width: 70,
-                        height: 70,
-                        fit: BoxFit.cover,
+                    // Image section with colored background
+                    Container(
+                      width: 120,
+                      height: 140,
+                      decoration: const BoxDecoration(
+                        color: Color(0xFFE8F5E8),
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(20),
+                          bottomLeft: Radius.circular(20),
+                        ),
+                      ),
+                      child: ClipRRect(
+                        borderRadius: const BorderRadius.only(
+                          topLeft: Radius.circular(20),
+                          bottomLeft: Radius.circular(20),
+                        ),
+                        child: Image.asset(
+                          'assets/images/work_routines_image2.png',
+                          width: 120,
+                          height: 140,
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
-                    const SizedBox(width: 12),
+                    // Text section with white background
                     Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Text(
-                            'Yoga Flow',
-                            style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.w700,
-                              color: Color(0xFF111827),
-                            ),
-                          ),
-                          const SizedBox(height: 2),
-                          const Text(
-                            'Flexibility',
-                            style: TextStyle(
-                              fontSize: 13,
-                              color: Color(0xFF6B7280),
-                            ),
-                          ),
-                          const SizedBox(height: 6),
-                          Container(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 6, vertical: 2),
-                            decoration: BoxDecoration(
-                              color: const Color(0xFFD2F0DF),
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: const Text(
-                              'Relax',
+                      child: Padding(
+                        padding: const EdgeInsets.all(12),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text(
+                              'Yoga Flow',
                               style: TextStyle(
-                                fontSize: 11,
-                                color: Color(0xFF059669),
+                                fontSize: 15,
+                                fontWeight: FontWeight.w700,
+                                color: Color(0xFF111827),
                               ),
                             ),
-                          ),
-                          const SizedBox(height: 2),
-                          const Row(
-                            children: [
-                              Text(
-                                'Difficulty: ',
-                                style: TextStyle(
-                                  fontSize: 11,
-                                  color: Color(0xFF6B7280),
-                                ),
+                            const SizedBox(height: 2),
+                            const Text(
+                              'Flexibility',
+                              style: TextStyle(
+                                fontSize: 13,
+                                color: Color(0xFF6B7280),
                               ),
-                              Text(
-                                'Easy',
+                            ),
+                            const SizedBox(height: 6),
+                            Container(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 6, vertical: 2),
+                              decoration: BoxDecoration(
+                                color: const Color(0xFFD2F0DF),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: const Text(
+                                'Relax',
                                 style: TextStyle(
                                   fontSize: 11,
                                   color: Color(0xFF059669),
-                                  fontWeight: FontWeight.w500,
                                 ),
                               ),
-                            ],
-                          ),
-                        ],
+                            ),
+                            const SizedBox(height: 2),
+                            const Row(
+                              children: [
+                                Text(
+                                  'Difficulty: ',
+                                  style: TextStyle(
+                                    fontSize: 11,
+                                    color: Color(0xFF6B7280),
+                                  ),
+                                ),
+                                Text(
+                                  'Easy',
+                                  style: TextStyle(
+                                    fontSize: 11,
+                                    color: Color(0xFF059669),
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],
@@ -949,7 +994,7 @@ class _AppointmentsTab extends StatelessWidget {
         const SizedBox(height: 12),
         // Workout cards - horizontal scrollable
         SizedBox(
-          height: 120,
+          height: 140,
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: [
@@ -958,80 +1003,104 @@ class _AppointmentsTab extends StatelessWidget {
                 width: 280,
                 margin: const EdgeInsets.only(right: 16),
                 decoration: BoxDecoration(
-                  color: const Color(0xFFFFE1D5),
+                  color: Colors.white,
                   borderRadius: BorderRadius.circular(20),
+                  border: Border.all(
+                    color: const Color(0xFFCDCDCD),
+                    width: 1,
+                  ),
                 ),
-                padding: const EdgeInsets.all(12),
                 child: Row(
                   children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(16),
-                      child: Image.asset(
-                        'assets/images/women_sweat_starter_card_image.png',
-                        width: 70,
-                        height: 70,
-                        fit: BoxFit.cover,
+                    // Image section with colored background
+                    Container(
+                      width: 120,
+                      height: 140,
+                      decoration: const BoxDecoration(
+                        color: Color(0xFFFFE1D5),
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(20),
+                          bottomLeft: Radius.circular(20),
+                        ),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 15),
+                        child: ClipRRect(
+                          borderRadius: const BorderRadius.only(
+                            topLeft: Radius.circular(20),
+                            bottomLeft: Radius.circular(20),
+                          ),
+                          child: Image.asset(
+                            'assets/images/women_sweat_starter_card_image.png',
+                            width: 80,
+                            height: 120,
+                            fit: BoxFit.contain,
+                          ),
+                        ),
                       ),
                     ),
-                    const SizedBox(width: 12),
+                    // Text section with white background
                     Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Text(
-                            'Sweat Starter',
-                            style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.w700,
-                              color: Color(0xFF111827),
-                            ),
-                          ),
-                          const SizedBox(height: 2),
-                          const Text(
-                            'Full Body',
-                            style: TextStyle(
-                              fontSize: 13,
-                              color: Color(0xFF6B7280),
-                            ),
-                          ),
-                          const SizedBox(height: 6),
-                          Container(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 6, vertical: 2),
-                            decoration: BoxDecoration(
-                              color: const Color(0xFFE0F2FE),
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: const Text(
-                              'Lose Weight',
+                      child: Padding(
+                        padding: const EdgeInsets.all(12),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text(
+                              'Sweat Starter',
                               style: TextStyle(
-                                fontSize: 11,
-                                color: Color(0xFF0369A1),
+                                fontSize: 15,
+                                fontWeight: FontWeight.w700,
+                                color: Color(0xFF111827),
                               ),
                             ),
-                          ),
-                          const SizedBox(height: 2),
-                          const Row(
-                            children: [
-                              Text(
-                                'Difficulty: ',
+                            const SizedBox(height: 2),
+                            const Text(
+                              'Full Body',
+                              style: TextStyle(
+                                fontSize: 13,
+                                color: Color(0xFF6B7280),
+                              ),
+                            ),
+                            const SizedBox(height: 6),
+                            Container(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 6, vertical: 2),
+                              decoration: BoxDecoration(
+                                color: const Color(0xFFE0F2FE),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: const Text(
+                                'Lose Weight',
                                 style: TextStyle(
                                   fontSize: 11,
-                                  color: Color(0xFF6B7280),
+                                  color: Color(0xFF0369A1),
                                 ),
                               ),
-                              Text(
-                                'Medium',
-                                style: TextStyle(
-                                  fontSize: 11,
-                                  color: Color(0xFFE05686),
-                                  fontWeight: FontWeight.w500,
+                            ),
+                            const SizedBox(height: 2),
+                            const Row(
+                              children: [
+                                Text(
+                                  'Difficulty: ',
+                                  style: TextStyle(
+                                    fontSize: 11,
+                                    color: Color(0xFF6B7280),
+                                  ),
                                 ),
-                              ),
-                            ],
-                          ),
-                        ],
+                                Text(
+                                  'Medium',
+                                  style: TextStyle(
+                                    fontSize: 11,
+                                    color: Color(0xFFE05686),
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],
@@ -1042,80 +1111,101 @@ class _AppointmentsTab extends StatelessWidget {
                 width: 280,
                 margin: const EdgeInsets.only(right: 16),
                 decoration: BoxDecoration(
-                  color: const Color(0xFFE8F5E8),
+                  color: Colors.white,
                   borderRadius: BorderRadius.circular(20),
+                  border: Border.all(
+                    color: const Color(0xFFCDCDCD),
+                    width: 1,
+                  ),
                 ),
-                padding: const EdgeInsets.all(12),
                 child: Row(
                   children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(16),
-                      child: Image.asset(
-                        'assets/images/work_routines_image2.png',
-                        width: 70,
-                        height: 70,
-                        fit: BoxFit.cover,
+                    // Image section with colored background
+                    Container(
+                      width: 120,
+                      height: 140,
+                      decoration: const BoxDecoration(
+                        color: Color(0xFFE8F5E8),
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(20),
+                          bottomLeft: Radius.circular(20),
+                        ),
+                      ),
+                      child: ClipRRect(
+                        borderRadius: const BorderRadius.only(
+                          topLeft: Radius.circular(20),
+                          bottomLeft: Radius.circular(20),
+                        ),
+                        child: Image.asset(
+                          'assets/images/work_routines_image2.png',
+                          width: 120,
+                          height: 140,
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
-                    const SizedBox(width: 12),
+                    // Text section with white background
                     Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Text(
-                            'Yoga Flow',
-                            style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.w700,
-                              color: Color(0xFF111827),
-                            ),
-                          ),
-                          const SizedBox(height: 2),
-                          const Text(
-                            'Flexibility',
-                            style: TextStyle(
-                              fontSize: 13,
-                              color: Color(0xFF6B7280),
-                            ),
-                          ),
-                          const SizedBox(height: 6),
-                          Container(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 6, vertical: 2),
-                            decoration: BoxDecoration(
-                              color: const Color(0xFFD2F0DF),
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: const Text(
-                              'Relax',
+                      child: Padding(
+                        padding: const EdgeInsets.all(12),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text(
+                              'Yoga Flow',
                               style: TextStyle(
-                                fontSize: 11,
-                                color: Color(0xFF059669),
+                                fontSize: 15,
+                                fontWeight: FontWeight.w700,
+                                color: Color(0xFF111827),
                               ),
                             ),
-                          ),
-                          const SizedBox(height: 2),
-                          const Row(
-                            children: [
-                              Text(
-                                'Difficulty: ',
-                                style: TextStyle(
-                                  fontSize: 11,
-                                  color: Color(0xFF6B7280),
-                                ),
+                            const SizedBox(height: 2),
+                            const Text(
+                              'Flexibility',
+                              style: TextStyle(
+                                fontSize: 13,
+                                color: Color(0xFF6B7280),
                               ),
-                              Text(
-                                'Easy',
+                            ),
+                            const SizedBox(height: 6),
+                            Container(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 6, vertical: 2),
+                              decoration: BoxDecoration(
+                                color: const Color(0xFFD2F0DF),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: const Text(
+                                'Relax',
                                 style: TextStyle(
                                   fontSize: 11,
                                   color: Color(0xFF059669),
-                                  fontWeight: FontWeight.w500,
                                 ),
                               ),
-                            ],
-                          ),
-                        ],
+                            ),
+                            const SizedBox(height: 2),
+                            const Row(
+                              children: [
+                                Text(
+                                  'Difficulty: ',
+                                  style: TextStyle(
+                                    fontSize: 11,
+                                    color: Color(0xFF6B7280),
+                                  ),
+                                ),
+                                Text(
+                                  'Easy',
+                                  style: TextStyle(
+                                    fontSize: 11,
+                                    color: Color(0xFF059669),
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],
