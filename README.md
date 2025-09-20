@@ -1,7 +1,33 @@
 
 # AAllyCare  
 
-AAllyCare is a Flutter application for health and fitness. It includes assessments, appointments, and personalized challenges, built with Firebase authentication and Riverpod state management.  
+AAllyCare is a Flutter application for health and fitness. It includes assessments, appointments, and personalised challenges, built with Firebase authentication and Riverpod state management.  
+
+## Vedio 
+
+https://github.com/user-attachments/assets/887a09f8-b8f2-4137-9f40-7ee5d9ac0394
+
+## Images
+
+- splashscreen
+![IMG-20250920-WA0012](https://github.com/user-attachments/assets/ee56c09f-9297-4002-a0fb-c15a5ec50133)
+
+- login/sign-in page
+![IMG-20250920-WA0014](https://github.com/user-attachments/assets/9545dd40-59e6-48d0-b5c2-3cd831ef8a0d)
+
+- My assessment page
+![IMG-20250920-WA0013](https://github.com/user-attachments/assets/602dce72-7274-4d6f-a6fe-f73f7c633e8b)
+
+- My Appointments page
+![IMG-20250920-WA0011](https://github.com/user-attachments/assets/7227e2b6-0ea9-4899-b51c-1fb0e91c14ba)
+
+- health risk assessment image
+![IMG-20250920-WA0016](https://github.com/user-attachments/assets/7099d476-d2ad-4804-8ec9-50ec31518820)
+
+- drawer with logout button functionality
+![IMG-20250920-WA0015](https://github.com/user-attachments/assets/8f899fd8-b743-476c-9cd4-266575c4e23f)
+
+  
 
 ## Architecture Decisions  
 - **Flutter + Riverpod** for cross-platform UI and scalable state management.  
