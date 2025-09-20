@@ -330,23 +330,31 @@ class _AssessmentsTab extends StatelessWidget {
                     ),
                     const SizedBox(height: 16),
                     Container(
-                      width: 120,
+                      width: 130,
                       height: 40,
                       decoration: BoxDecoration(
-                        color: const Color(0xFF2E61D3),
+                        color: Colors.white,
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: TextButton.icon(
                         onPressed: () {},
-                        icon: const Icon(
-                          Icons.play_arrow,
-                          color: Colors.white,
-                          size: 20,
+                        icon: Container(
+                          width: 24,
+                          height: 24,
+                          decoration: const BoxDecoration(
+                            color: Color(0xFF2E61D3),
+                            shape: BoxShape.circle,
+                          ),
+                          child: const Icon(
+                            Icons.play_arrow,
+                            color: Colors.white,
+                            size: 16,
+                          ),
                         ),
                         label: const Text(
                           'Continue',
                           style: TextStyle(
-                            color: Colors.white,
+                            color: Color(0xFF2E61D3),
                             fontWeight: FontWeight.w600,
                           ),
                         ),
@@ -850,23 +858,31 @@ class _AppointmentsTab extends StatelessWidget {
                     ),
                     const SizedBox(height: 16),
                     Container(
-                      width: 120,
+                      width: 130,
                       height: 40,
                       decoration: BoxDecoration(
-                        color: const Color(0xFF2E61D3),
+                        color: Colors.white,
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: TextButton.icon(
                         onPressed: () {},
-                        icon: const Icon(
-                          Icons.play_arrow,
-                          color: Colors.white,
-                          size: 20,
+                        icon: Container(
+                          width: 24,
+                          height: 24,
+                          decoration: const BoxDecoration(
+                            color: Color(0xFF2E61D3),
+                            shape: BoxShape.circle,
+                          ),
+                          child: const Icon(
+                            Icons.play_arrow,
+                            color: Colors.white,
+                            size: 16,
+                          ),
                         ),
                         label: const Text(
                           'Continue',
                           style: TextStyle(
-                            color: Colors.white,
+                            color: Color(0xFF2E61D3),
                             fontWeight: FontWeight.w600,
                           ),
                         ),
