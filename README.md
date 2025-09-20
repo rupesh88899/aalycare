@@ -9,23 +9,24 @@ https://github.com/user-attachments/assets/887a09f8-b8f2-4137-9f40-7ee5d9ac0394
 
 ## Images
 
-- splashscreen
-![IMG-20250920-WA0012](https://github.com/user-attachments/assets/ee56c09f-9297-4002-a0fb-c15a5ec50133)
+- Splashscreen  
+<img src="https://github.com/user-attachments/assets/ee56c09f-9297-4002-a0fb-c15a5ec50133" width="300">
 
-- login/sign-in page
-![IMG-20250920-WA0014](https://github.com/user-attachments/assets/9545dd40-59e6-48d0-b5c2-3cd831ef8a0d)
+- Login/Sign-in page  
+<img src="https://github.com/user-attachments/assets/9545dd40-59e6-48d0-b5c2-3cd831ef8a0d" width="300">
 
-- My assessment page
-![IMG-20250920-WA0013](https://github.com/user-attachments/assets/602dce72-7274-4d6f-a6fe-f73f7c633e8b)
+- My Assessment page  
+<img src="https://github.com/user-attachments/assets/602dce72-7274-4d6f-a6fe-f73f7c633e8b" width="300">
 
-- My Appointments page
-![IMG-20250920-WA0011](https://github.com/user-attachments/assets/7227e2b6-0ea9-4899-b51c-1fb0e91c14ba)
+- My Appointments page  
+<img src="https://github.com/user-attachments/assets/7227e2b6-0ea9-4899-b51c-1fb0e91c14ba" width="300">
 
-- health risk assessment image
-![IMG-20250920-WA0016](https://github.com/user-attachments/assets/7099d476-d2ad-4804-8ec9-50ec31518820)
+- Health Risk Assessment  
+<img src="https://github.com/user-attachments/assets/7099d476-d2ad-4804-8ec9-50ec31518820" width="300">
 
-- drawer with logout button functionality
-![IMG-20250920-WA0015](https://github.com/user-attachments/assets/8f899fd8-b743-476c-9cd4-266575c4e23f)
+- Drawer with Logout Button  
+<img src="https://github.com/user-attachments/assets/8f899fd8-b743-476c-9cd4-266575c4e23f" width="300">
+
 
   
 
