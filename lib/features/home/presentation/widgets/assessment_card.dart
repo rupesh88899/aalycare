@@ -36,14 +36,29 @@ class AssessmentCard extends StatelessWidget {
             padding: const EdgeInsets.all(16),
             child: Row(
               children: [
-                // Image
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(16),
-                  child: Image.asset(
-                    imageAsset,
-                    width: 120,
-                    height: 110,
-                    fit: BoxFit.cover,
+                // Image with background
+                Container(
+                  width: 140,
+                  height: 130,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    color: title == 'Fitness Assessment'
+                        ? const Color(
+                            0xFFFFF4E6) // Light orange background for fitness
+                        : const Color(
+                            0xFFE8F5E8), // Light green background for health risk
+                  ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(16),
+                    child: Image.asset(
+                      imageAsset,
+                      width: title == 'Fitness Assessment' ? 120 : 110,
+                      height: title == 'Fitness Assessment' ? 110 : 100,
+                      fit: title == 'Fitness Assessment'
+                          ? BoxFit.contain
+                          : BoxFit
+                              .cover, // Woman uses contain, man uses cover for zoom
+                    ),
                   ),
                 ),
                 const SizedBox(width: 16),
