@@ -495,14 +495,18 @@ class _AssessmentsTab extends StatelessWidget {
                               padding: const EdgeInsets.symmetric(
                                   horizontal: 6, vertical: 2),
                               decoration: BoxDecoration(
-                                color: const Color(0xFFE0F2FE),
+                                color: Colors.white,
                                 borderRadius: BorderRadius.circular(10),
+                                border: Border.all(
+                                  color: const Color(0xFFCDCDCD),
+                                  width: 1,
+                                ),
                               ),
                               child: const Text(
                                 'Lose Weight',
                                 style: TextStyle(
                                   fontSize: 11,
-                                  color: Color(0xFF0369A1),
+                                  color: Color(0xFF255FD5),
                                 ),
                               ),
                             ),
@@ -600,14 +604,18 @@ class _AssessmentsTab extends StatelessWidget {
                               padding: const EdgeInsets.symmetric(
                                   horizontal: 6, vertical: 2),
                               decoration: BoxDecoration(
-                                color: const Color(0xFFD2F0DF),
+                                color: Colors.white,
                                 borderRadius: BorderRadius.circular(10),
+                                border: Border.all(
+                                  color: const Color(0xFFCDCDCD),
+                                  width: 1,
+                                ),
                               ),
                               child: const Text(
                                 'Relax',
                                 style: TextStyle(
                                   fontSize: 11,
-                                  color: Color(0xFF059669),
+                                  color: Color(0xFF255FD5),
                                 ),
                               ),
                             ),
@@ -654,96 +662,157 @@ class _AppointmentsTab extends StatelessWidget {
     return ListView(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
       children: [
-        // Appointment cards grid
-        Row(
-          children: [
-            // Cancer 2nd Opinion card
-            Expanded(
-              child: Container(
-                height: 130,
-                decoration: BoxDecoration(
-                  color: const Color(0xFFDCE8FF),
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                padding: const EdgeInsets.all(16),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Image.asset(
-                      'assets/images/canccer_2nd_option_icon.png',
-                      width: 40,
-                      height: 40,
-                    ),
-                    const Spacer(),
-                    const Text(
-                      'Cancer 2nd Opinion',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w700,
-                        color: Color(0xFF111827),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            const SizedBox(width: 12),
-            // Physiotherapy Appointment card
-            Expanded(
-              child: Container(
-                height: 130,
-                decoration: BoxDecoration(
-                  color: const Color(0xFFEAD9FF),
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                padding: const EdgeInsets.all(16),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Image.asset(
-                      'assets/images/physiotherapy_appointment_icon.png',
-                      width: 40,
-                      height: 40,
-                    ),
-                    const Spacer(),
-                    const Text(
-                      'Physiotherapy Appointment',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w700,
-                        color: Color(0xFF111827),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
-        const SizedBox(height: 12),
-        // Fitness Appointment card (full width)
+        // Appointment cards container with background
         Container(
-          height: 130,
           decoration: BoxDecoration(
-            color: const Color(0xFFFFE1D5),
+            color: const Color(0xFFF6F6FB),
             borderRadius: BorderRadius.circular(20),
           ),
           padding: const EdgeInsets.all(16),
-          child: Row(
+          child: Column(
             children: [
-              Image.asset(
-                'assets/images/fitness_appointment_icon.png',
-                width: 40,
-                height: 40,
+              // First row - 2 cards
+              Row(
+                children: [
+                  // Cancer 2nd Opinion card
+                  Expanded(
+                    child: Container(
+                      height: 150,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFDCE8FF),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      padding: const EdgeInsets.all(20),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            width: 60,
+                            height: 60,
+                            decoration: const BoxDecoration(
+                              color: Colors.white,
+                              shape: BoxShape.circle,
+                            ),
+                            child: Center(
+                              child: Image.asset(
+                                'assets/images/canccer_2nd_option_icon.png',
+                                width: 30,
+                                height: 30,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 8),
+                          const Text(
+                            'Cancer 2nd Opinion',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w700,
+                              color: Color(0xFF222E58),
+                            ),
+                            textAlign: TextAlign.center,
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  // Physiotherapy Appointment card
+                  Expanded(
+                    child: Container(
+                      height: 150,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFEAD9FF),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      padding: const EdgeInsets.all(20),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            width: 60,
+                            height: 60,
+                            decoration: const BoxDecoration(
+                              color: Colors.white,
+                              shape: BoxShape.circle,
+                            ),
+                            child: Center(
+                              child: Image.asset(
+                                'assets/images/physiotherapy_appointment_icon.png',
+                                width: 30,
+                                height: 30,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 8),
+                          const Text(
+                            'Physiotherapy Appointment',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w700,
+                              color: Color(0xFF222E58),
+                            ),
+                            textAlign: TextAlign.center,
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
               ),
-              const SizedBox(width: 16),
-              const Text(
-                'Fitness Appointment',
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w700,
-                  color: Color(0xFF111827),
-                ),
+              const SizedBox(height: 12),
+              // Second row - 1 card (centered)
+              Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      height: 150,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFFFE1D5),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      padding: const EdgeInsets.all(20),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            width: 60,
+                            height: 60,
+                            decoration: const BoxDecoration(
+                              color: Colors.white,
+                              shape: BoxShape.circle,
+                            ),
+                            child: Center(
+                              child: Image.asset(
+                                'assets/images/fitness_appointment_icon.png',
+                                width: 30,
+                                height: 30,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 8),
+                          const Text(
+                            'Fitness Appointment',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w700,
+                              color: Color(0xFF222E58),
+                            ),
+                            textAlign: TextAlign.center,
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  // Empty space to maintain grid alignment
+                  const Expanded(child: SizedBox()),
+                ],
               ),
             ],
           ),
@@ -1068,14 +1137,18 @@ class _AppointmentsTab extends StatelessWidget {
                               padding: const EdgeInsets.symmetric(
                                   horizontal: 6, vertical: 2),
                               decoration: BoxDecoration(
-                                color: const Color(0xFFE0F2FE),
+                                color: Colors.white,
                                 borderRadius: BorderRadius.circular(10),
+                                border: Border.all(
+                                  color: const Color(0xFFCDCDCD),
+                                  width: 1,
+                                ),
                               ),
                               child: const Text(
                                 'Lose Weight',
                                 style: TextStyle(
                                   fontSize: 11,
-                                  color: Color(0xFF0369A1),
+                                  color: Color(0xFF255FD5),
                                 ),
                               ),
                             ),
@@ -1173,14 +1246,18 @@ class _AppointmentsTab extends StatelessWidget {
                               padding: const EdgeInsets.symmetric(
                                   horizontal: 6, vertical: 2),
                               decoration: BoxDecoration(
-                                color: const Color(0xFFD2F0DF),
+                                color: Colors.white,
                                 borderRadius: BorderRadius.circular(10),
+                                border: Border.all(
+                                  color: const Color(0xFFCDCDCD),
+                                  width: 1,
+                                ),
                               ),
                               child: const Text(
                                 'Relax',
                                 style: TextStyle(
                                   fontSize: 11,
-                                  color: Color(0xFF059669),
+                                  color: Color(0xFF255FD5),
                                 ),
                               ),
                             ),
