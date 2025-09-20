@@ -139,7 +139,7 @@ class AssessmentDetailScreen extends StatelessWidget {
                       ),
                       const SizedBox(height: 20),
                       // Feature icons row
-                      Row(
+                      const Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Expanded(
@@ -179,56 +179,74 @@ class AssessmentDetailScreen extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 20),
-                      // Exercise image
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(16),
-                        child: Image.asset(
-                          'assets/images/how_we_do_it_image.png',
-                          width: double.infinity,
-                          height: 200,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      const SizedBox(height: 16),
-                      // Privacy notice
+                      // Content with border container
                       Container(
-                        padding: const EdgeInsets.all(16),
                         decoration: BoxDecoration(
-                          color: const Color(0xFFE8F5E8),
-                          borderRadius: BorderRadius.circular(12),
+                          borderRadius: BorderRadius.circular(16),
+                          border: Border.all(
+                            color: const Color(0xFFE6E6E6),
+                            width: 1,
+                          ),
                         ),
-                        child: Row(
+                        // padding: const EdgeInsets.all(20),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
+                            // Exercise image
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(16),
+                              child: Image.asset(
+                                'assets/images/how_we_do_it_image.png',
+                                width: double.infinity,
+                                height: 200,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                            const SizedBox(height: 16),
+                            // Privacy notice
                             Container(
-                              width: 32,
-                              height: 32,
-                              decoration: const BoxDecoration(
-                                color: Color(0xFF4CAF50),
-                                shape: BoxShape.circle,
+                              padding: const EdgeInsets.all(16),
+                              decoration: BoxDecoration(
+                                color: const Color(0xFFE8F5E8),
+                                borderRadius: BorderRadius.circular(12),
                               ),
-                              child: const Icon(
-                                Icons.shield_outlined,
-                                color: Colors.white,
-                                size: 18,
+                              child: Row(
+                                children: [
+                                  Container(
+                                    width: 32,
+                                    height: 32,
+                                    decoration: const BoxDecoration(
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Center(
+                                      child: Image.asset(
+                                        'assets/images/green_shield.png',
+                                        width: 18,
+                                        height: 18,
+                                        fit: BoxFit.contain,
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(width: 12),
+                                  const Expanded(
+                                    child: Text(
+                                      'We do not store or share your personal data',
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w500,
+                                        color: Color(0xFF707070),
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
-                            const SizedBox(width: 12),
-                            const Expanded(
-                              child: Text(
-                                'We do not store or share your personal data',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w500,
-                                  color: Color(0xFF2E7D32),
-                                ),
-                              ),
-                            ),
+                            const SizedBox(height: 20),
+                            // Steps list
+                            const _StepList(),
                           ],
                         ),
                       ),
-                      const SizedBox(height: 20),
-                      // Steps list
-                      const _StepList(),
                       const SizedBox(height: 30),
                       // Start button
                       SizedBox(
@@ -318,6 +336,7 @@ class _StepList extends StatelessWidget {
       'Allow camera access and place your device against a stable object or wall',
       'Avoiding wearing baggy clothes',
       'Make sure you exercise as per the instruction provided by the trainer',
+      'Watch the short preview before each exercise',
     ];
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -328,22 +347,12 @@ class _StepList extends StatelessWidget {
                 child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Container(
-                        width: 24,
-                        height: 24,
-                        decoration: const BoxDecoration(
-                          color: Color(0xFF2E61D3),
-                          shape: BoxShape.circle,
-                        ),
-                        child: Center(
-                          child: Text(
-                            '${index + 1}',
-                            style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 12,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
+                      Text(
+                        '${index + 1}.',
+                        style: const TextStyle(
+                          color: Color(0xFF222E58),
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                       const SizedBox(width: 12),
@@ -352,7 +361,7 @@ class _StepList extends StatelessWidget {
                           steps[index],
                           style: const TextStyle(
                             fontSize: 14,
-                            color: Color(0xFF666666),
+                            color: Color(0xFF222E58),
                             height: 1.4,
                           ),
                         ),
